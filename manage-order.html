@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Orders</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body class="container">
+    <h1>Manage Orders</h1>
+    <form id="frmOrder">
+        <p id="cidoption"  class="form-group">
+            <input  id="inphidden" hidden name="customerid">
+            <select class="form-control" id="cid" name="cid" value="option">
+            <option id="cusid">select-Customer Id</option></select>
+        </p>
+        <p class="form-group">
+            <label>Customer Name</label>
+            <input class="form-control" name="cname" id="txtName">
+        </p>
+        <p class="form-group">
+            <label>OrderId</label>
+            <input class="form-control" name="oid" id="txtorderid">
+        </p>
+        <p class="form-group">
+            <label>Order Date</label>
+            <input class="form-control" name="orderDate" id="txtOrderDate">
+        </p>
+
+        <p id="codeOption"  class="form-group">
+            <input  id="codehidden" hidden name="itemcode">
+            <label>Item Code</label>
+            <select class="form-control" id="nameCode" name="code" value="option1">
+                <option id="code">select-Code</option></select>
+        </p>
+
+        <p class="form-group">
+            <label>Description</label>
+            <input class="form-control" name="description" id="txtdescription">
+        </p>
+        <p class="form-group">
+            <label>Qty on Hand</label>
+            <input class="form-control" name="qtyonhand" id="txtqtyonhand">
+        </p>
+        <p class="form-group">
+            <label>Unit Price</label>
+            <input class="form-control" name="unitprice" id="txtunitprice">
+        </p>
+        <p class="form-group">
+            <label>Qty</label>
+            <input class="form-control" name="qty" id="txtqty">
+        </p>
+            <!--hidden input-->
+        <input name="cAction" id="txtAction" type="text" hidden>
+
+        <p>
+            <button type="button" class="btn btn-primary" id="btnSave">Add Item</button>
+        </p>
+
+    <table id="tblOrders" class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Unit Price</th>
+            <th>Qty</th>
+            <th>total price</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <p>
+        <button type="button" class="btn btn-primary" id="btnSaveOrder">Save Order</button>
+    </p>
+    </form>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="controller/manage-order-controller.js"></script>
+</body>
+</html>
